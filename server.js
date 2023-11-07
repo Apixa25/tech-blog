@@ -1,9 +1,12 @@
+require('dotenv').config()
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 const routes = require('./controllers');
+console.log(process.env.DB_USER);
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -12,7 +15,7 @@ const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || 'myvaluehere',
     cookie: {
         maxAge: 300000,
     },
