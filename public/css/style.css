@@ -1,7 +1,7 @@
 :root {
-    --primary: #f8edeb;
-    --secondary: #c9ada7;
-    --dark: #450920;  
+    --primary: #E1AA74;
+    --secondary: #3876BF;
+    --dark: #192655;  
     --border-radius: 0.3rem;
 }
 
@@ -57,7 +57,7 @@ main {
   input {
       width: 100%;
       border: 1px solid #ccc;
-      background: #FFF;
+      background: #F3F0CA;
       margin: 0 0 5px;
       padding: 10px;
   }
